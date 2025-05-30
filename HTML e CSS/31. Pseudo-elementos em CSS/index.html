@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {color: blue;
+        text-decoration: none; /* para tirar o sublinhado */
+        font-weight: bold;} /* para deixar a fonte em negrito */
+        
+
+       a:visited {color: purple;} /* o link fica de cor diferente quando você já acessou ele (não funcionou; revisar!)*/
+
+        a:hover {text-decoration: underline;
+                 color: black;} /* esses comandos servem para quand passarmos o mouse por cima do link */
+
+        a:active {color: green;} /* para mudar a cor do link enquanto você segura com o botão do mouse mas sem clicar */
+        
+        
+        a::before {content: '→ → ';} /* para incluir algo antes do link */        
+        
+        a::after { content: ' (link)';
+                   text-decoration: none;
+                   font-weight: normal;
+                   color: darkgrey;
+                } /* para indicar que um link é um link */
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1> 
+    <ul>
+        <li><a href="https://www.darksidebooks.com.br/">Darkside</a></li>
+        <li><a href="https://editoraunesp.com.br/">Editora Unesp</a></li>
+        <li><a href="https://www.boitempoeditorial.com.br/?srsltid=AfmBOoo-hYtJAy8pekRc2i0d6QQa7vM0cxuV6kb5skhHlzYaISOuLhWW">Editora Boitempo</a></li>
+    </ul>
+
+    <!-- # - id
+         . - class
+         : - pseudo-class
+         :: - pseudo-element
+         > - children    -->
+    
+</body>
+</html>

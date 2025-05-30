@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Level</title>
+    <style>
+
+        h1 {
+
+            /* para transformar um elemento box level em inline level basta adicionar DISPLAY: INLINE; */
+
+            /* para transformar um elemento inline level em box level basta adicionar DISPLAY: BLOCK; */
+
+            background-color: lightgreen;
+            height: 300px; /* altura */
+            width: 300px; /* comprimento */
+            
+            Border: 10px solid blue
+
+            padding: 10px 10px 10px 10px /* se todas as 4 medidas forem iguais, basta adicionar uma vez que o valor valerá para os 4 lados; quando você coloca dois valores, o primeiro configura top-bottom e o segundo right-left */
+
+            margin: 20px auto 40px auto /* a margem esqureda e direita são calculadas automaticamente com "auto" */
+
+            outline: 5px solid salmon; 
+
+
+
+        } 
+
+        
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box level</h1>
+    <p>Parágrafos também são exemplos de box level, mas os <a href="#">links</a> são exemplos de inline level</p>
+</body>
+</html>

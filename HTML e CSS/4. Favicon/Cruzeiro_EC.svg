@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect x="-2.4414e-5" y="7.3242e-6" width="600" height="400" fill="#004886"/>
+ <path id="a" d="m224.68 63.984 29.912-5.099 4.3939-30.024 14.093 26.872 29.912-5.099-21.202 21.707 14.093 26.872-27.196-13.457-21.202 21.707 4.3939-30.024z" fill="#fff"/>
+ <use transform="matrix(.8809 0 0 .8809 -85.125 117.27)" xlink:href="#a"/>
+ <use transform="matrix(.86677 0 0 .86677 174.6 102.22)" xlink:href="#a"/>
+ <use transform="matrix(.51456 0 0 .51456 183.91 171.96)" xlink:href="#a"/>
+ <use transform="matrix(.8301 .063202 -.063202 .8301 77.802 267.8)" xlink:href="#a"/>
+</svg>
