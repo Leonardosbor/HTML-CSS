@@ -34,7 +34,12 @@
         }
         
 
-        .num {
+        tbody > tr:nth-child(2n) {
+            background-color: lightgrey;
+        } /* tr:nth-child(2n): efeito zebrado; posso colocar ODD ou 2n-1 (ímpar); EVEN ou 2n (par) → tr:nth-child(odd)  */
+
+
+        td.num {
             text-align: right;
         }
 
