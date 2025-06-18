@@ -9,7 +9,28 @@
     <h1>Checkbox e Radio Button</h1>
 
 
-    
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+    <fieldset>
+        <legend>Sexo</legend>
+        <input type="radio" name="sexo" id="isexmas" value="M"> <label for="isexmas">Masculino</label>
+        <input type="radio" name="sexo" id="isexfem" value="F"> <label for="isexfem" >Feminino</label>
+
+
+        <legend>Esportes favoritos</legend>
+        <input type="checkbox" name="futebol" id="ifutebol"> <label for="ifutebol">Futebol</label> <br>
+        <input type="checkbox" name="basquete" id="ibasquete"> <label for="ibasquete">Basquete</label> <br>
+        <input type="checkbox" name="volei" id="ivolei"> <label for="ivolei">Volei</label> <br>
+        <input type="checkbox" name="natacao" id="inatacao"> <label for="inatacao">Natação</label> <br>
+        <input type="checkbox" name="sinuca" id="isinuca"> <label for="isinuca">Sinuca</label>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+
+    </form>
 
 
 
