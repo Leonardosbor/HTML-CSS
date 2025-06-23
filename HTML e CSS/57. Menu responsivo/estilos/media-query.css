@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* Pequenas telas: até 480px
+Celular: de 481px a 767px
+Tablet: de 768px a 1023px
+Desktop: de 1024px a 1279px
+Grandes telas: de 1280px a 1536px+ */
+
+
+@media screen and (min-width: 768px) {
+
+    #burger-icon {
+        display: none !important;
+    }
+
+    menu {
+        display: block !important;
+    }
+
+    menu > ul > li {
+        display: inline-block;
+    }
+
+    main {
+        width: 768px;
+    }
+}
+
+
+
+
