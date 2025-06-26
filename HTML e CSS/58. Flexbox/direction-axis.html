@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div.conteiner {
+            background-color: lightblue;
+            display: flex;
+        }
+
+        div.item {
+            background-color: blue;
+            border: 1px solid black;
+            flex: auto;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+    </div>
+    
+</body>
+</html>
+
+<!-- Configurações pro PAI (conteiner):
+
+
+        Flex-direction: row → cross-axis (de cima pra baixo); main-axis (da esquerda pra direita)
+
+
+        Flex-direction: row-reverse → main-axis (da direita pra esquerda); cross-axis (de cima pra baixo) 
+
+
+        Flex-direction: column → cross-axis (da esquerda pra direita); main-axis (de cima pra baixo)
+
+
+        Flex-direction: column-reverse → main-axis (de baixo pra cima); cross-axis (da esquerda pra direita) --> 
+
+        
+
+
+
+
+        
