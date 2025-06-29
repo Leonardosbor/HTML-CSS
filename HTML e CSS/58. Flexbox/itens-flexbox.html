@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia dos itens</title>
+    <style>
+        div.conteiner {
+            
+            background-color: lightgreen;
+            display: flex;
+            flex-flow: row wrap;
+            height: 400px;
+            align-items: flex-start;
+            
+            
+        }
+
+        div.item {
+        
+            background-color: pink;
+            color: black;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+
+        #a {
+            align-self: auto;
+        }
+
+        #b {
+            align-self: stretch;
+        }
+
+        #c {
+            align-self: flex-end;
+        }
+
+        #d {
+            align-self: flex-end;
+        }
+
+        #e {
+            align-self: stretch;
+        }
+
+        #f {
+            align-self: auto;
+        }
+
+        #g {
+            align-self: stretch;
+        }
+
+        #h {
+            align-self: flex-end;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item" id="a">A</div>
+        <div class="item" id="b">B</div>
+        <div class="item" id="c">C</div>
+        <div class="item" id="d">D</div>
+        <div class="item" id="e">E</div>
+        <div class="item" id="f">F</div>
+        <div class="item" id="g">G</div>
+        <div class="item" id="h">H</div>
+        
+    </div>
+</body>
+</html>
+
+<!-- <div class="item" style="order: -3;">D</div> -->
