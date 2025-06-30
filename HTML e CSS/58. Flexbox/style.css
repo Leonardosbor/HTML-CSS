@@ -18,14 +18,43 @@ header {
     background-color: gray;
     color: white;
     padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header > h1 {
-    border: 1px dotted black;
+    flex: 0 0 200px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.541);
 }
 
 header > nav {
-    border: 1px dotted black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header > nav > a {
+    background-color: rgb(78, 78, 78);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+header > nav > a:hover {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: .5s;
 }
 
 main {
@@ -35,3 +64,22 @@ main {
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.788);
 }
+
+
+@media screen and (max-width: 500px) {
+
+    header, header > nav {
+        flex-flow: column nowrap;
+    }
+
+    header > h1 {
+        flex-basis: 50px;
+    }
+
+    header > nav > a {
+        width: 70vw;
+    }
+}
+    
+
+
