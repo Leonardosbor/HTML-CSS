@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbasis</title>
+    <style>
+        .conteiner {
+            background-color: pink;
+            display: flex;
+            flex-flow: row nowrap;
+            
+        }
+
+        .item {
+            background-color: rgba(137, 43, 226, 0.767);
+            color: black;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+            
+            
+        }
+
+
+        #cxa {
+            flex: 1 1 250px;
+            
+        }
+
+        #cxb {
+            flex: 2 2 250px;
+        }
+
+        #cxc {
+            flex: 3 3 250px;
+        } /* flex: grow + shrink + basis */
+          /* flex: 0 1 auto → flex: initial */
+          /* flex: 0 0 auto → flex: none */
+          /* flex: 1 1 auto → flex: auto */
+          /* flex: 3 → flex: 3 1 auto */
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item" id="cxa">A</div>
+        <div class="item" id="cxb">B</div>
+        <div class="item" id="cxc">C</div>
+        
+    </div>
+</body>
+</html>
