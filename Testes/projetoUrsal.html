@@ -264,49 +264,123 @@
 
 
         #HumanidadesTítulo {
-            text-indent: 1%;
-            margin-bottom: 3%;
+            text-indent: .6%;
+            margin-bottom: .6%;
         }
+
 
         #Humanidades {
             background-color: rgba(137, 43, 226, 0.623);
             color: white;
-            margin-left: 1%;
-            margin-right: 1%;
+            margin-left: .5%;
+            margin-bottom: 8%;
             display: grid;
             grid-template-rows: repeat(6, 200px);
-            grid-template-columns: repeat(6, 218px);
-            gap: 1%;
+            grid-template-columns: repeat(6, 200px);
+            gap: 2%;
+            height: 97vh;
+            width: 98vw;
         }
 
         
         .História {
+            margin-left: 2%;
+            margin-top: 2%;
             background-color: blue;
+            grid-row: 1/2;
+            grid-column: 1/3;
         }
 
         .Filosofia {
             background-color: red;
+            grid-row: 1/3;
+            grid-column: 3/4;
+            margin-top: 4.1%;
         }
 
 
         .Economia {
             background-color: green;
+            grid-row: 1/3;
+            grid-column: 4/5;
+            margin-top: 4.1%;
         }
 
 
         .RI {
             background-color: yellow;
             color: black;
+            grid-row: 1/3;
+            grid-column: 5/7;
+            margin-top: 2.2%;
+            margin-right: 2%;
         }
 
 
         .Direito {
             background-color: black;
+            grid-row: 2/4;
+            grid-column: 1/3;
+            margin-left: 2%;
         }
 
 
         .Literatura {
             background-color: brown;
+            grid-row: 3/4;
+            grid-column: 3/7;
+            margin-right: 1%;
+        }
+
+
+        #ExatasTítulo {
+            text-indent: .6%;
+            margin-bottom: .6%;
+        }
+
+
+        #Exatas {
+            background-color: rgba(16, 173, 201, 0.705);
+            display: grid;
+            grid-template-columns: repeat(6, 200px);
+            grid-template-rows: repeat(6, 200px);
+            width: 98vw;
+            height: 97vh;
+            gap: 2%;
+            margin-left: .5%;
+        }
+
+
+        .Matemática {
+            background-color: rgb(138, 9, 31);
+            grid-area: 1/1/3/2;
+        }
+
+
+        .Química {
+            background-color: orangered;
+            grid-area: 1/2/3/4;
+            
+        }
+
+
+        .Física {
+            background-color: goldenrod;
+        }
+
+
+        .Astronomia {
+            background-color: darkslategrey;
+        }
+
+
+        .Geologia {
+            background-color: darkolivegreen;
+        }
+
+
+        .Oceanografia {
+            background-color: slateblue;
         }
 
 
@@ -368,10 +442,10 @@
                 <div class="Economia">Economia</div>
                 <div class="RI">Relações Internacionais</div>
                 <div class="Direito">Direito</div>
-                <div class="Literatura">Literatura</div>
+                <div class="Literatura">Literatura</div> 
         </section>
 
-           <!-- <div id="ExatasTítulo"><h1>EXATAS</h1></div>
+           <div id="ExatasTítulo"><h1>EXATAS</h1></div>
             <section id="Exatas">
                 <div class="Matemática">Matemática</div>
                 <div class="Química">Química</div>
@@ -381,7 +455,7 @@
                 <div class="Oceanografia">Oceanografia</div>
             </section>
 
-            <div id="BiológicasTítulo"><h1>BIOLÓGICAS</h1></div>
+            <!-- <div id="BiológicasTítulo"><h1>BIOLÓGICAS</h1></div>
             <section id="Biológicas">
                 <div class="BioCelular">Biologia Celular</div>
                 <div class="BioQuímica">Bioquímica</div>
