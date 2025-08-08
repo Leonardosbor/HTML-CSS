@@ -366,26 +366,79 @@
 
         .Física {
             background-color: goldenrod;
+            grid-area: 1/4/3/5;
         }
 
 
         .Astronomia {
             background-color: darkslategrey;
+            grid-area: 1/5/4/6;
         }
 
 
         .Geologia {
             background-color: darkolivegreen;
+            grid-area: 1/6/4/7;
         }
 
 
         .Oceanografia {
             background-color: slateblue;
+            grid-area: 4/1/3/5;
         }
 
 
+        #BiológicasTítulo {
+            text-indent: .6%;
+            margin-bottom: .6%;
+            margin-top: 12%;
+        }
 
-    </style>
+
+        #Biológicas {
+            background-color: rgba(128, 0, 128, 0.377);
+            display: grid;
+            grid-template-columns: repeat(6, 200px);
+            grid-template-rows: repeat(6, 200px);
+            width: 98vw;
+            height: 97vh;
+            gap: 2%;
+            margin-left: .5%;
+        }
+
+
+        .BioCelular {
+            background-color: rgb(15, 20, 70);
+            color: white;
+            grid-row: 1/3;
+        }
+
+
+        .BioQuímica {
+            background-color: rgb(11, 85, 9);
+            grid-row: ;
+        }
+
+
+        .BioTecnologia {
+            background-color: rgb(168, 99, 74);
+        }
+
+
+        .BioFísica {
+            background-color: rgb(199, 10, 10);
+        }
+
+
+        .Imunologia {
+            background-color: rgb(175, 8, 119);
+        }
+
+
+        .Paleontologia {
+            background-color: rgb(187, 91, 13);
+        }
+</style>
 </head>
 <body>
     <!-- <header id="cabeçalho">
@@ -435,7 +488,7 @@
         </section> -->
 
 
-        <div id="HumanidadesTítulo"><h1>HUMANIDADES</h1></div>
+         <!-- <div id="HumanidadesTítulo"><h1>HUMANIDADES</h1></div>
         <section id="Humanidades">
                 <div class="História">História</div>
                 <div class="Filosofia">Filosofia</div>
@@ -443,9 +496,9 @@
                 <div class="RI">Relações Internacionais</div>
                 <div class="Direito">Direito</div>
                 <div class="Literatura">Literatura</div> 
-        </section>
+        </section> --> 
 
-           <div id="ExatasTítulo"><h1>EXATAS</h1></div>
+            <div id="ExatasTítulo"><h1>EXATAS</h1></div>
             <section id="Exatas">
                 <div class="Matemática">Matemática</div>
                 <div class="Química">Química</div>
@@ -455,7 +508,7 @@
                 <div class="Oceanografia">Oceanografia</div>
             </section>
 
-            <!-- <div id="BiológicasTítulo"><h1>BIOLÓGICAS</h1></div>
+            <div id="BiológicasTítulo"><h1>BIOLÓGICAS</h1></div>
             <section id="Biológicas">
                 <div class="BioCelular">Biologia Celular</div>
                 <div class="BioQuímica">Bioquímica</div>
@@ -465,7 +518,7 @@
                 <div class="Paleontologia">Paleontologia</div>
             </section>
 
-            <div id="EngTecTítulo"><h1>ENGENHARIAS E TECNOLOGIA</h1></div>
+            <!--<div id="EngTecTítulo"><h1>ENGENHARIAS E TECNOLOGIA</h1></div>
             <section id="EngTec">
                 <div class="Engenharia">Engehnarias</div>
                 <div class="Comp">Ciências da Computação</div>
