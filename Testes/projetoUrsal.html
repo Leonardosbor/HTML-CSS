@@ -40,11 +40,12 @@
 
 
         #div-megamenu {
-            display: ;
+            display: none;
             position: absolute;
             background-color: lightgray;
             border: 1px solid rgba(0, 0, 0, 0.418);
             border-radius: 10px;
+            width: 67%;
         }
 
 
@@ -55,21 +56,34 @@
             display: grid;
             grid-template-rows: repeat(6, 50px);
             grid-template-columns: repeat(5,150px);
-            
-            
+            gap: 27px;
+            row-gap: 10px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-
 
         
         #div-megamenu-column a {
-            margin-top: 12%;
+            margin-top: 16%;
             margin-left: 12%;
+            background-color: gray;
+            border-radius: 5px;
+            padding: 8px;
+            width: 170px;
+            height: 50px;
+            color: black;
         }
 
 
+        #div-megamenu-column a:hover {
+            background-color: red;
+            color: white;
+        }
 
 
-        
+        #Livros-Megamenu:hover + #div-megamenu, #div-megamenu:hover {
+            display: block;
+        }
 
 
         .imagem1 {
@@ -500,45 +514,47 @@
         <nav>
             <ul id="ul-megamenu">
                 <li id="li-megamenu">
-                    <a href="#" id="Livros-Megamenu">Livros</a>
-                    <div id="div-megamenu">
-                        <div id="div-megamenu-column">
-                            <a href="#" class="História-Megamenu">História</a>
-                            <a href="#" class="Filosofia-Megamenu">Filosofia</a>
-                            <a href="#" class="Sociologia-Megamenu">Sociologia</a>
-                            <a href="#" class="Antropologia-Megamenu">Antropologia</a>
-                            <a href="#" class="Direito-Megamenu">Direito</a>
-                            <a href="#" class="CiênciaPolítica-Megamenu">Ciência Política</a>
-                            <a href="#" class="Arqueologia-Megamenu">Arqueologia</a>
-                            <a href="#" class="Geografia-Megamenu">Geografia</a>
-                            <a href="#" class="Psicologia-Megamenu">Psicologia</a>
-                            <a href="#" class="Biografias-Megamenu">Biografias</a>
-                            <a href="#" class="LitBras-Megamenu">Literatura Brasileira</a>
-                            <a href="#" class="LitEst-Megamenu">Literatura Estrangeira</a>
-                            <a href="#" class="Tech-Megamenu">Tecnologia</a>
-                            <a href="#" class="MedSaúde-Megamenu">Medicina e Saúde</a>
-                            <a href="#" class="Bio-Megamenu">Biologia</a>
-                            <a href="#" class="Física-Megamenu">Física</a>
-                            <a href="#" class="Química-Megamenu">Química</a>
-                            <a href="#" class="Mat-Megamenu">Matemática</a>
-                            <a href="#" class="Geologia-Megamenu">Geologia</a>
-                            <a href="#" class="Criminologia-Megamenu">Criminologia</a>
-                            <a href="#" class="Poesia-Megamenu">Poesia</a>
-                            <a href="#" class="Pedagogia-Megamenu">Pedagogia</a>
-                            <a href="#" class="EduFísica-Megamenu">Educação Física</a>
-                            <a href="#" class="Linguística-Megamenu">Linguística</a>
-                            <a href="#" class="LivrosInglês-Megamenu">Livros em Inglês</a>
-                            <a href="#" class="LivrosEspanhol-Megamenu">Livros em Espanhol</a>
-                            <a href="#" class="LivrosFrancês-Megamenu">Livros em Francês</a>
-                            <a href="#" class="LivrosAlemão-Megamenu">Livros em Alemão</a>
-                            <a href="#" class="LivrosItaliano-Megamenu">Livros em Italiano</a>
+                    <div id="div-pre-megamenu">
+                        <a href="#" id="Livros-Megamenu">Livros</a>
+                        <div id="div-megamenu">
+                            <div id="div-megamenu-column">
+                                <a href="#" class="História-Megamenu">História</a>
+                                <a href="#" class="Filosofia-Megamenu">Filosofia</a>
+                                <a href="#" class="Sociologia-Megamenu">Sociologia</a>
+                                <a href="#" class="Antropologia-Megamenu">Antropologia</a>
+                                <a href="#" class="Direito-Megamenu">Direito</a>
+                                <a href="#" class="CiênciaPolítica-Megamenu">Ciência Política</a>
+                                <a href="#" class="Arqueologia-Megamenu">Arqueologia</a>
+                                <a href="#" class="Geografia-Megamenu">Geografia</a>
+                                <a href="#" class="Psicologia-Megamenu">Psicologia</a>
+                                <a href="#" class="Biografias-Megamenu">Biografias</a>
+                                <a href="#" class="LitBras-Megamenu">Literatura Brasileira</a>
+                                <a href="#" class="LitEst-Megamenu">Literatura Estrangeira</a>
+                                <a href="#" class="Tech-Megamenu">Tecnologia</a>
+                                <a href="#" class="MedSaúde-Megamenu">Medicina e Saúde</a>
+                                <a href="#" class="Bio-Megamenu">Biologia</a>
+                                <a href="#" class="Física-Megamenu">Física</a>
+                                <a href="#" class="Química-Megamenu">Química</a>
+                                <a href="#" class="Mat-Megamenu">Matemática</a>
+                                <a href="#" class="Geologia-Megamenu">Geologia</a>
+                                <a href="#" class="Criminologia-Megamenu">Criminologia</a>
+                                <a href="#" class="Poesia-Megamenu">Poesia</a>
+                                <a href="#" class="Pedagogia-Megamenu">Pedagogia</a>
+                                <a href="#" class="EduFísica-Megamenu">Educação Física</a>
+                                <a href="#" class="Linguística-Megamenu">Linguística</a>
+                                <a href="#" class="LivrosInglês-Megamenu">Livros em Inglês</a>
+                                <a href="#" class="LivrosEspanhol-Megamenu">Livros em Espanhol</a>
+                                <a href="#" class="LivrosFrancês-Megamenu">Livros em Francês</a>
+                                <a href="#" class="LivrosAlemão-Megamenu">Livros em Alemão</a>
+                                <a href="#" class="LivrosItaliano-Megamenu">Livros em Italiano</a>
+                            </div>
                         </div>
                     </div>
                 </li>
             </ul>
         </nav>
     </header>
-     <!-- <main>
+    <main>
         <section id="informações">
             <div class="imagem1">CARROSSEL DE IMAGENS E EVENTOS</div>
         </section>
@@ -579,55 +595,13 @@
         <section id="coleçãoLivros2">
             <div class="coleçãoAngelaDavis">COLEÇÃO ANGELA DAVIS</div>
             <div class="coleçãoFanon">COLEÇÃO FRANTZ FANON</div>
-        </section> -->
-
-
-       <!-- <div id="HumanidadesTítulo"><h1>HUMANIDADES</h1></div>
-        <section id="Humanidades">
-                <div class="História">História</div>
-                <div class="Filosofia">Filosofia</div>
-                <div class="Economia">Economia</div>
-                <div class="RI">Relações Internacionais</div>
-                <div class="Direito">Direito</div>
-                <div class="Literatura">Literatura</div> 
         </section> 
-
-            <div id="ExatasTítulo"><h1>EXATAS</h1></div>
-            <section id="Exatas">
-                <div class="Matemática">Matemática</div>
-                <div class="Química">Química</div>
-                <div class="Física">Física</div>
-                <div class="Astronomia">Astronomia</div>
-                <div class="Geologia">Geologia</div>
-                <div class="Oceanografia">Oceanografia</div>
-            </section>
-
-            <div id="BiológicasTítulo"><h1>BIOLÓGICAS</h1></div>
-            <section id="Biológicas">
-                <div class="BioCelular">Biologia Celular</div>
-                <div class="BioQuímica">Bioquímica</div>
-                <div class="BioTecnologia">Biotecnologia</div>
-                <div class="BioFísica">Biofísica</div>
-                <div class="Imunologia">Imunologia</div>
-                <div class="Paleontologia">Paleontologia</div>
-            </section> 
-
-            <div id="EngTecTítulo"><h1>ENGENHARIAS E TECNOLOGIA</h1></div>
-            <section id="EngTec">
-                <div class="Engenharias">Engenharias</div>
-                <div class="CieComp">Ciências da Computação</div>
-                <div class="SistInformação">Sistemas da Informação</div>
-                <div class="IA">Inteligência Artificial</div>
-                <div class="RobAut">Robótica e Automação</div>
-                <div class="TecEsp">Tecnologia Espacial</div>
-            </section> 
-        
 
       <section id="BCF">
             <div class="blogdaUrsal"><p>BLOG DA URSAL</p></div>
             <div class="editorasAcadêmicas"><p>EDITORAS ACADEMICAS</p></div>
             <div class="cursoseFormações"><p>CURSOS E FORMAÇÕES</p></div>
-        </section> -->
+        </section>
     </main>
 
     <!--  <aside id="editorasParceiras">
