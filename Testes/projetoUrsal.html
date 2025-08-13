@@ -1,69 +1,657 @@
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Ursal</title>
     <style>
-        header {
-            background-color: red;
-            width: 98vw;
-            height: 90px;
-            padding: 6px;
-            
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
         }
 
-
-        header h1 {
+        #cabeçalho {
+            background-color: rgba(228, 18, 18, 0.801);
+            padding: 8px;
             text-indent: 5px;
-            margin-top: 5px;
+            height: 120px;
+            max-width: 1250px;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 2%;
         }
 
-        .li-menu {
+        
+        #títuloCabeçalho {
+            margin-bottom: 2.5%;
+        }
+
+
+        #ul-megamenu li {
             list-style: none;
+        }
+
+
+        #ul-megamenu li a {
+            text-decoration: none;
+        }
+
+
+        #div-megamenu {
+            display: ;
+            position: absolute;
+            background-color: lightgray;
+            border: 1px solid rgba(0, 0, 0, 0.418);
+            border-radius: 10px;
+        }
+
+
+        #div-megamenu-column {
+            float: left;
+            width: 60vw;
+            height: 60vh;
+            display: grid;
+            grid-template-rows: repeat(6, 50px);
+            grid-template-columns: repeat(5,150px);
             
             
         }
 
 
-        .div-menu {
-            display: flex;
+        
+        #div-megamenu-column a {
+            margin-top: 12%;
+            margin-left: 12%;
         }
+
+
+
 
         
 
 
-        .div-menu a {
-            text-decoration: none;
-            background-color: rgb(107, 8, 8);
+        .imagem1 {
+            background-color: rgba(128, 128, 128, 0.603);
+            height: 400px;
+            max-width: 1300px;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 8%;
+            text-align: center;
+        }
+
+
+        #preVendaTítulo {
+            text-indent: 34px;
+            margin-bottom: 1%;
+            
+        }
+
+
+        #preVenda {
+            background-color: lightgreen;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            justify-content: center;
+            width: 95%;
+            margin: auto;
+            margin-bottom: 10%;
+            gap: 30px;
+        }
+
+
+        .preVenda1 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px;
+        }
+
+
+        .preVenda2 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px;
+        }
+
+
+        .preVenda3 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .preVenda4 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .preVenda5 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        #LançamentosTítulo {
+            text-indent: 34px;
+            margin-bottom: 1%;
+        }
+
+
+        #Lançamentos {
+            background-color: lightblue;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+            width: 95%;
+            margin: auto;
+            margin-bottom: 10%;
+            gap: 30px;
+        }
+
+
+        .Lançamento1 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .Lançamento2 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .Lançamento3 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .Lançamento4 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .Lançamento5 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        #livrosMaisVendidosTítulo {
+            text-indent: 34px;
+            margin-bottom: 1%;
+        }
+
+
+        #maisVendidos {
+            background-color: pink;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+            gap: 30px;
+            width: 95%;
+            margin: auto;
+            margin-bottom: 13%;
+        }
+        
+
+        .maisVendido1 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .maisVendido2 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .maisVendido3 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .maisVendido4 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        .maisVendido5 {
+            border: 1px solid rgba(0, 0, 0, 0.801);
+            width: 18%;
+            height: 290px; 
+        }
+
+
+        #coleçãoLivrosTítulo {
+            text-align: center;
+            margin-bottom: 0.5%;
+        }
+
+        
+        #coleçãoLivros {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+            background-color: lightgray;
+            gap: 20px;
+            margin-bottom: 2%;
+        }
+
+
+        .coleçãoAnarquismo {
+            background-color: gray;
+            padding: 140px;
+            width: 500px;
+            margin-left: 160px;
+        }
+
+
+        .coleçãoMarxismo {
+            background-color: gray;
+            padding: 140px;
+            width: 500px;
+            margin-right: 160px;
+        }
+
+
+        #coleçãoLivros2 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+            background-color: lightgray;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 10%;
+        }
+
+        .coleçãoAngelaDavis {
+            background-color: gray;
+            padding: 140px;
+            width: 500px;
+            
+        }
+
+        .coleçãoFanon {
+            background-color: gray;
+            padding: 140px;
+            width: 500px;
+            
+        }
+
+
+      /*  #HumanidadesTítulo, #ExatasTítulo, #BiológicasTítulo, #EngTecTítulo  {
+            text-indent: .6%;
+            margin-bottom: .6%;
+        }
+
+
+        #Humanidades, #Exatas, #Biológicas {
             color: white;
-            font-weight: bolder;
-            font-family: Arial, Helvetica, sans-serif;
-            letter-spacing: .5px;
-            padding: 4px;
-            border-radius: 4px;
-            margin-right: 10px;
+            margin-left: .5%;
+            margin-bottom: 14%;
+            display: grid;
+            grid-template-rows: repeat(3, 200px);
+            grid-template-columns: repeat(6, 200px);
+            gap: 1.8%;
+            height: 65vh;
+            width: 98vw;
+        }
+
+
+        #EngTec {
+            color: white;
+            margin-left: .5%;
+            margin-bottom: 17%;
+            display: grid;
+            grid-template-rows: repeat(3, 200px);
+            grid-template-columns: repeat(6, 200px);
+            gap: 1.8%;
+            height: 65vh;
+            width: 98vw;
+        }
+
+        
+        .História, .Matemática, .BioCelular, .Engenharias {
+            background-color: blue;
+            grid-row: 1/2;
+            grid-column: 1/3;
+            margin-left: 2.5%;
+            margin-top: 2%;
+            transition: transform .3s ease;
+        }
+
+        
+        
+        .Filosofia, .Química, .Imunologia, .CieComp {
+            background-color: red;
+            grid-row: 1/2;
+            grid-column: 3/5;
+            margin-top: 2%;
+            transition: transform .3s ease;
+        }
+
+
+        .Economia, .Física, .BioFísica, .SistInformação {
+            background-color: green;
+            grid-row: 2/3;
+            grid-column: 3/5;
+            margin-top: 1.5%;
+            transition: transform .3s ease;
+        }
+
+
+        .RI, .Astronomia, .Paleontologia, .IA {
+            background-color: yellow;
+            color: black;
+            grid-row: 1/2;
+            grid-column: 5/7;
+            margin-top: 2%;
+            transition: transform .3s ease;
+        }
+
+
+        .Direito, .Oceanografia, .BioQuímica, .RobAut {
+            background-color: black;
+            grid-row: 2/3;
+            grid-column: 1/3;
+            margin-left: 2.5%;
+            margin-top: 1.5%;
+            transition: transform .3s ease;
+        }
+
+
+        .Literatura, .Geologia, .BioTecnologia, .TecEsp {
+            background-color: brown;
+            grid-row: 2/3;
+            grid-column: 5/7;
+            margin-top: 1.5%;
+            transition: transform .3s ease;
+            text-align: center;
+            
 
         }
 
-    </style>
+
+        .História:hover, .Matemática:hover, .BioCelular:hover, .Engenharias:hover, .Filosofia:hover, .Química:hover, .Imunologia:hover, .CieComp:hover, .Economia:hover, .Física:hover, .BioFísica:hover, .SistInformação:hover, .RI:hover, .Astronomia:hover, .Paleontologia:hover, .IA:hover, .Direito:hover, .Oceanografia:hover, .BioQuímica:hover, .RobAut:hover, .Literatura:hover, .Geologia:hover, .BioTecnologia:hover, .TecEsp:hover {
+            transform: translateX(-6px);
+            border-radius: 1.5%;
+        } */
+
+      
+
+        #BCF {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1%;
+            width: 97vw;
+            height: 60vh;
+            
+        }
+
+
+        .blogdaUrsal {
+            background-color: blueviolet;
+            width: 25%;
+            height: 95%;
+            margin-right: 3%;
+            text-align: center;
+            transition: transform .3s ease;
+            clip-path: polygon(
+                0% 10%,
+                10% 0%,
+                90% 0%,
+                100% 10%,
+                100% 90%,
+                90% 100%,
+                10% 100%,
+                0% 90%
+            ); 
+        }
+
+
+        .editorasAcadêmicas {
+            background-color: yellowgreen;
+            width: 25%;
+            height: 95%;
+            margin-right: 3%;
+            text-align: center;
+            transition: transform .3s ease;
+            clip-path: polygon(
+              0% 10%,
+              10% 0%,
+              90% 0%,
+              100% 10%,
+              100% 90%,
+              90% 100%,
+              10% 100%,
+              0% 90%
+            );
+        }
+
+        
+        
+        .cursoseFormações {
+            background-color: violet;
+            width: 25%;
+            height: 95%;
+            text-align: center;
+            transition: transform .3s ease;
+            clip-path: polygon(
+              0% 10%,
+              10% 0%,
+              90% 0%,
+              100% 10%,
+              100% 90%,
+              90% 100%,
+              10% 100%,
+              0% 90%
+            );
+        }
+
+
+        .blogdaUrsal:hover, .editorasAcadêmicas:hover, .cursoseFormações:hover  {
+            transform: translateY(-7px);
+        }
+
+
+        
+
+</style>
 </head>
 <body>
-    <header>
-        <h1>URSAL</h1>
+    <header id="cabeçalho">
+        <div id="títuloCabeçalho">
+            <h1>URSAL</h1>
+        </div> 
         <nav>
-            <ul>
-                <li class="li-menu">
-                    <div class="div-menu">
-                        <a href="#" class="Livros-menu">LIVROS</a>
-                        <a href="#">PROMOÇÕES</a>
-                        <a href="#">EDITORAS PARCEIRAS</a>
-                        <a href="#">EVENTOS</a>
-                        <a href="#">NOTÍCIAS</a>
+            <ul id="ul-megamenu">
+                <li id="li-megamenu">
+                    <a href="#" id="Livros-Megamenu">Livros</a>
+                    <div id="div-megamenu">
+                        <div id="div-megamenu-column">
+                            <a href="#" class="História-Megamenu">História</a>
+                            <a href="#" class="Filosofia-Megamenu">Filosofia</a>
+                            <a href="#" class="Sociologia-Megamenu">Sociologia</a>
+                            <a href="#" class="Antropologia-Megamenu">Antropologia</a>
+                            <a href="#" class="Direito-Megamenu">Direito</a>
+                            <a href="#" class="CiênciaPolítica-Megamenu">Ciência Política</a>
+                            <a href="#" class="Arqueologia-Megamenu">Arqueologia</a>
+                            <a href="#" class="Geografia-Megamenu">Geografia</a>
+                            <a href="#" class="Psicologia-Megamenu">Psicologia</a>
+                            <a href="#" class="Biografias-Megamenu">Biografias</a>
+                            <a href="#" class="LitBras-Megamenu">Literatura Brasileira</a>
+                            <a href="#" class="LitEst-Megamenu">Literatura Estrangeira</a>
+                            <a href="#" class="Tech-Megamenu">Tecnologia</a>
+                            <a href="#" class="MedSaúde-Megamenu">Medicina e Saúde</a>
+                            <a href="#" class="Bio-Megamenu">Biologia</a>
+                            <a href="#" class="Física-Megamenu">Física</a>
+                            <a href="#" class="Química-Megamenu">Química</a>
+                            <a href="#" class="Mat-Megamenu">Matemática</a>
+                            <a href="#" class="Geologia-Megamenu">Geologia</a>
+                            <a href="#" class="Criminologia-Megamenu">Criminologia</a>
+                            <a href="#" class="Poesia-Megamenu">Poesia</a>
+                            <a href="#" class="Pedagogia-Megamenu">Pedagogia</a>
+                            <a href="#" class="EduFísica-Megamenu">Educação Física</a>
+                            <a href="#" class="Linguística-Megamenu">Linguística</a>
+                            <a href="#" class="LivrosInglês-Megamenu">Livros em Inglês</a>
+                            <a href="#" class="LivrosEspanhol-Megamenu">Livros em Espanhol</a>
+                            <a href="#" class="LivrosFrancês-Megamenu">Livros em Francês</a>
+                            <a href="#" class="LivrosAlemão-Megamenu">Livros em Alemão</a>
+                            <a href="#" class="LivrosItaliano-Megamenu">Livros em Italiano</a>
+                        </div>
                     </div>
                 </li>
             </ul>
         </nav>
     </header>
+     <!-- <main>
+        <section id="informações">
+            <div class="imagem1">CARROSSEL DE IMAGENS E EVENTOS</div>
+        </section>
+
+        <div id="preVendaTítulo"><h1>PRÉ-VENDA</h1></div>
+        <section id="preVenda">
+            <div class="preVenda1">PRÉ-VENDA 1</div>
+            <div class="preVenda2">PRÉ-VENDA 2</div>
+            <div class="preVenda3">PRÉ-VENDA 3</div>
+            <div class="preVenda4">PRÉ-VENDA 4</div>
+            <div class="preVenda5">PRÉ-VENDA 5</div>
+        </section>
+
+        <div id="LançamentosTítulo"><h1>LANÇAMENTOS</h1></div>
+        <section id="Lançamentos">
+            <div class="Lançamento1">LIVRO 1</div>
+            <div class="Lançamento2">LIVRO 2</div>
+            <div class="Lançamento3">LIVRO 3</div>
+            <div class="Lançamento4">LIVRO 4</div>
+            <div class="Lançamento5">LIVRO 5</div>
+        </section>
+
+        <div id="livrosMaisVendidosTítulo"><h1>MAIS VENDIDOS</h1></div>
+        <section id="maisVendidos">
+            <div class="maisVendido1">MAIS VENDIDO 1</div>
+            <div class="maisVendido2">MAIS VENDIDO 2</div>
+            <div class="maisVendido3">MAIS VENDIDO 3</div>
+            <div class="maisVendido4">MAIS VENDIDO 4</div>
+            <div class="maisVendido5">MAIS VENDIDO 5</div>
+        </section>
+
+        <div id="coleçãoLivrosTítulo"><h1>COLEÇÕES</h1></div>
+        <section id="coleçãoLivros">
+            <div class="coleçãoAnarquismo">COLEÇÃO ANARQUISMO</div>
+            <div class="coleçãoMarxismo">COLEÇÃO MARX E ENGELS</div>
+        </section>
+        
+        <section id="coleçãoLivros2">
+            <div class="coleçãoAngelaDavis">COLEÇÃO ANGELA DAVIS</div>
+            <div class="coleçãoFanon">COLEÇÃO FRANTZ FANON</div>
+        </section> -->
+
+
+       <!-- <div id="HumanidadesTítulo"><h1>HUMANIDADES</h1></div>
+        <section id="Humanidades">
+                <div class="História">História</div>
+                <div class="Filosofia">Filosofia</div>
+                <div class="Economia">Economia</div>
+                <div class="RI">Relações Internacionais</div>
+                <div class="Direito">Direito</div>
+                <div class="Literatura">Literatura</div> 
+        </section> 
+
+            <div id="ExatasTítulo"><h1>EXATAS</h1></div>
+            <section id="Exatas">
+                <div class="Matemática">Matemática</div>
+                <div class="Química">Química</div>
+                <div class="Física">Física</div>
+                <div class="Astronomia">Astronomia</div>
+                <div class="Geologia">Geologia</div>
+                <div class="Oceanografia">Oceanografia</div>
+            </section>
+
+            <div id="BiológicasTítulo"><h1>BIOLÓGICAS</h1></div>
+            <section id="Biológicas">
+                <div class="BioCelular">Biologia Celular</div>
+                <div class="BioQuímica">Bioquímica</div>
+                <div class="BioTecnologia">Biotecnologia</div>
+                <div class="BioFísica">Biofísica</div>
+                <div class="Imunologia">Imunologia</div>
+                <div class="Paleontologia">Paleontologia</div>
+            </section> 
+
+            <div id="EngTecTítulo"><h1>ENGENHARIAS E TECNOLOGIA</h1></div>
+            <section id="EngTec">
+                <div class="Engenharias">Engenharias</div>
+                <div class="CieComp">Ciências da Computação</div>
+                <div class="SistInformação">Sistemas da Informação</div>
+                <div class="IA">Inteligência Artificial</div>
+                <div class="RobAut">Robótica e Automação</div>
+                <div class="TecEsp">Tecnologia Espacial</div>
+            </section> 
+        
+
+      <section id="BCF">
+            <div class="blogdaUrsal"><p>BLOG DA URSAL</p></div>
+            <div class="editorasAcadêmicas"><p>EDITORAS ACADEMICAS</p></div>
+            <div class="cursoseFormações"><p>CURSOS E FORMAÇÕES</p></div>
+        </section> -->
+    </main>
+
+    <!--  <aside id="editorasParceiras">
+        <h1>EDITORAS PARCEIRAS</h1>
+        <div class="Boitempo">Boitempo</div>
+        <div class="ciadasLetras">Companhia das Letras</div>
+        <div class="Unesp">Editora Unesp</div>
+        <div class="autonomiaLiterária">Autonomia Literária</div>
+        <div class="civilizaçãoBrasileira">Civilização Brasileira</div>
+        <div class="Contexto">Contexto</div>
+        <div class="expressãoPopular">Expressão Popular</div>
+        <div class="Edusp">Editora da USP</div>
+        <div class="Appris">Editora Appris</div>
+        <div class="alamedaEditorial">Alameda Editorial</div>
+    </aside>
+
+    <footer id="conteúdoFinal">
+        <div class="redesSociais">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+            <a href="#">YouTube</a>
+            <a href="#">E-mail</a>
+        </div>
+    </footer> -->
 </body>
 </html>
