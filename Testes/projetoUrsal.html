@@ -16,16 +16,49 @@
             background-color: rgba(228, 18, 18, 0.801);
             padding: 8px;
             text-indent: 5px;
-            height: 120px;
-            max-width: 1250px;
-            width: 100%;
+            height: 227px;
+            width: 80%;
             margin: auto;
             margin-bottom: 2%;
         }
 
-        
+       
         #títuloCabeçalho {
             margin-bottom: 2.5%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+
+        .inputCabeçalho {
+            width: 36%;
+            margin-left: 15%;
+            text-align: center;
+            padding: .8%;
+            border-radius: 10px;
+            border-style: none;
+        }
+
+
+        .menu-cabeçalho1, .menu-cabeçalho2, .menu-cabeçalho3, .menu-cabeçalho4, .menu-cabeçalho5 {
+            list-style: none;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(179, 10, 10);
+            border-radius: 3px;
+            padding: 4px;
+        }
+
+
+        .menu-cabeçalho1 {
+            margin-right: 1%;
+        }
+
+
+        .menu-cabeçalho2, .menu-cabeçalho3, .menu-cabeçalho4, .menu-cabeçalho5 {
+            margin-right: 1%;
         }
 
 
@@ -398,55 +431,57 @@
         .blogdaUrsal:hover, .editorasAcadêmicas:hover, .cursoseFormações:hover  {
             transform: translateY(-7px);
         }
-
-
-        
-
 </style>
 </head>
 <body>
     <header id="cabeçalho">
         <div id="títuloCabeçalho">
-            <h1>URSAL</h1>
+            <img src="Ursal.jpg" alt="Logo Livraria Ursal">
+            <input class="inputCabeçalho" type="text" name="pesquisa" id="ipesquisa" placeholder="Pesquise por nome de autor ou título de livro"> 
+        </div>
         </div> 
         <nav>
             <ul id="ul-megamenu">
                 <li id="li-megamenu">
                     <div id="div-pre-megamenu">
-                        <a href="#" id="Livros-Megamenu">Livros</a>
+                        <a href="#" class="menu-cabeçalho1" id="Livros-Megamenu">Livros</a>
                         <div id="div-megamenu">
                             <div id="div-megamenu-column">
-                                <a href="#" class="História-Megamenu">História</a>
-                                <a href="#" class="Filosofia-Megamenu">Filosofia</a>
-                                <a href="#" class="Sociologia-Megamenu">Sociologia</a>
-                                <a href="#" class="Antropologia-Megamenu">Antropologia</a>
-                                <a href="#" class="Direito-Megamenu">Direito</a>
-                                <a href="#" class="CiênciaPolítica-Megamenu">Ciência Política</a>
-                                <a href="#" class="Arqueologia-Megamenu">Arqueologia</a>
-                                <a href="#" class="Geografia-Megamenu">Geografia</a>
-                                <a href="#" class="Psicologia-Megamenu">Psicologia</a>
-                                <a href="#" class="Biografias-Megamenu">Biografias</a>
-                                <a href="#" class="LitBras-Megamenu">Literatura Brasileira</a>
-                                <a href="#" class="LitEst-Megamenu">Literatura Estrangeira</a>
-                                <a href="#" class="Tech-Megamenu">Tecnologia</a>
-                                <a href="#" class="MedSaúde-Megamenu">Medicina e Saúde</a>
-                                <a href="#" class="Bio-Megamenu">Biologia</a>
-                                <a href="#" class="Física-Megamenu">Física</a>
-                                <a href="#" class="Química-Megamenu">Química</a>
-                                <a href="#" class="Mat-Megamenu">Matemática</a>
-                                <a href="#" class="Geologia-Megamenu">Geologia</a>
-                                <a href="#" class="Criminologia-Megamenu">Criminologia</a>
-                                <a href="#" class="Poesia-Megamenu">Poesia</a>
-                                <a href="#" class="Pedagogia-Megamenu">Pedagogia</a>
-                                <a href="#" class="EduFísica-Megamenu">Educação Física</a>
-                                <a href="#" class="Linguística-Megamenu">Linguística</a>
-                                <a href="#" class="LivrosInglês-Megamenu">Livros em Inglês</a>
-                                <a href="#" class="LivrosEspanhol-Megamenu">Livros em Espanhol</a>
-                                <a href="#" class="LivrosFrancês-Megamenu">Livros em Francês</a>
-                                <a href="#" class="LivrosAlemão-Megamenu">Livros em Alemão</a>
-                                <a href="#" class="LivrosItaliano-Megamenu">Livros em Italiano</a>
+                                <a href="#">História</a>
+                                <a href="#">Filosofia</a>
+                                <a href="#">Sociologia</a>
+                                <a href="#">Antropologia</a>
+                                <a href="#">Direito</a>
+                                <a href="#">Ciência Política</a>
+                                <a href="#">Arqueologia</a>
+                                <a href="#">Geografia</a>
+                                <a href="#">Psicologia</a>
+                                <a href="#">Biografias</a>
+                                <a href="#">Literatura Brasileira</a>
+                                <a href="#">Literatura Estrangeira</a>
+                                <a href="#">Tecnologia</a>
+                                <a href="#">Medicina e Saúde</a>
+                                <a href="#">Biologia</a>
+                                <a href="#">Física</a>
+                                <a href="#">Química</a>
+                                <a href="#">Matemática</a>
+                                <a href="#">Geologia</a>
+                                <a href="#">Criminologia</a>
+                                <a href="#">Poesia</a>
+                                <a href="#">Pedagogia</a>
+                                <a href="#">Educação Física</a>
+                                <a href="#">Linguística</a>
+                                <a href="#">Livros em Inglês</a>
+                                <a href="#">Livros em Espanhol</a>
+                                <a href="#">Livros em Francês</a>
+                                <a href="#">Livros em Alemão</a>
+                                <a href="#">Livros em Italiano</a>
                             </div>
                         </div>
+                        <a href="#" class="menu-cabeçalho2">Autores</a>
+                        <a href="#" class="menu-cabeçalho3">Notícias</a>
+                        <a href="#" class="menu-cabeçalho4">Editora Ursal</a>
+                        <a href="#" class="menu-cabeçalho5">Blog da Ursal</a>
                     </div>
                 </li>
             </ul>
