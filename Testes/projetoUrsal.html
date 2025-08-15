@@ -78,7 +78,7 @@
             background-color: lightgray;
             border: 1px solid rgba(0, 0, 0, 0.418);
             border-radius: 10px;
-            width: 67%;
+            width: 68%;
         }
 
 
@@ -119,14 +119,37 @@
         }
 
 
-        .imagem1 {
+        #carrossel {
             background-color: rgba(128, 128, 128, 0.603);
             height: 400px;
-            max-width: 1300px;
+            max-width: 1200px;
             width: 100%;
             margin: auto;
             margin-bottom: 8%;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+
+        .imagens {
+            min-width: 100%;
+            height: 100%;
+        }
+
+
+        .imagens img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
 
@@ -488,8 +511,13 @@
         </nav>
     </header>
     <main>
-        <section id="informações">
-            <div class="imagem1">CARROSSEL DE IMAGENS E EVENTOS</div>
+        <section id="carrossel">
+            <div class="slides">
+                <div class="imagens"><a href=""><img src="colecao-freud.jpeg" alt="Imagem1"></a></div>
+                <div class="imagens"><a href=""><img src="o-capital.jpg" alt="Imagem2"></a></div>
+                <div class="imagens"><a href=""><img src="hist_africa.jpg" alt="Imagem3"></a></div>
+                <div class="imagens"><a href=""><img src="o-brasil-rep-2.jpg" alt="Imagem4"></a></div>
+            </div>
         </section>
 
         <div id="preVendaTítulo"><h1>PRÉ-VENDA</h1></div>
@@ -560,5 +588,29 @@
             <a href="#">E-mail</a>
         </div>
     </footer> -->
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.slides');
+            const slideItems = document.querySelectorAll('.imagens');
+            let currentIndex = 0;
+            const totalSlides = slideItems.length;
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlidePosition()
+            }
+
+            function updateSlidePosition() {
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            setInterval(nextSlide, 5000);
+
+        });
+
+
+    </script>
 </body>
 </html>
