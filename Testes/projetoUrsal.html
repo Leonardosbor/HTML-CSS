@@ -120,7 +120,6 @@
 
 
         #carrossel {
-            background-color: rgba(128, 128, 128, 0.603);
             height: 400px;
             max-width: 1200px;
             width: 100%;
@@ -136,13 +135,15 @@
             display: flex;
             width: 100%;
             height: 100%;
-            transition: transform 0.5s ease-in-out;
+            transition: .5s ease-in-out;
+            
         }
 
 
         .imagens {
             min-width: 100%;
             height: 100%;
+            
         }
 
 
@@ -516,7 +517,7 @@
                 <div class="imagens"><a href=""><img src="colecao-freud.jpeg" alt="Imagem1"></a></div>
                 <div class="imagens"><a href=""><img src="o-capital.jpg" alt="Imagem2"></a></div>
                 <div class="imagens"><a href=""><img src="hist_africa.jpg" alt="Imagem3"></a></div>
-                <div class="imagens"><a href=""><img src="o-brasil-rep-2.jpg" alt="Imagem4"></a></div>
+                <div class="imagens"><a href=""><img src="promoção-boitempo.jpg" alt="Imagem4"></a></div>
             </div>
         </section>
 
@@ -591,25 +592,51 @@
 
     <script>
         
-        document.addEventListener('DOMContentLoaded', function() {
+      /* document.addEventListener('DOMContentLoaded', function() {
             const slides = document.querySelector('.slides');
-            const imagens = document.querySelectorAll('.imagens');
-            let currentIndex = 0;
-            const totalSlides = imagens.length;
+            const images = document.querySelectorAll('.imagens');
+            let currentImage = 0;
+            const totalSlides = images.length;
 
             function nextSlide() {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateSlidePosition()
+                currentImage = (currentImage + 1) % totalSlides;
+                updateSlidePosition();
             }
 
             function updateSlidePosition() {
-                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                slides.style.transform = `translateX(-${currentImage * 100}%)`
             }
 
             setInterval(nextSlide, 4000);
+        })
 
-        });
+        */
 
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.slides');
+            const images = document.querySelectorAll('.imagens');
+            let currentImage = 0;
+            const totalSlides = images.length;
+            const firstSlide = images[0].cloneNode(true);
+            slides.appendChild(firstSlide);
+
+            
+            function nextSlide() {
+                currentImage++;
+                slides.style.transition = 'transform 0.5s ease-in-out';
+                slides.style.transform =  `translateX(-${currentImage * 100}%)`;
+
+                if (currentImage === totalSlides) {
+                    setTimeout (() => {
+                        slides.style.transition = 'none';
+                        currentImage = 0;
+                        slides.style.transform = `translateX(0)`;
+                    }, 500)
+                }
+            }
+
+            setInterval(nextSlide, 5000);
+        })
 
     </script>
 </body>
