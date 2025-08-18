@@ -592,27 +592,34 @@
 
     <script>
         
-      /* document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelector('.slides');
-            const images = document.querySelectorAll('.imagens');
-            let currentImage = 0;
-            const totalSlides = images.length;
+     document.addEventListener('DOMContentLoaded', function {
 
-            function nextSlide() {
-                currentImage = (currentImage + 1) % totalSlides;
-                updateSlidePosition();
+        const slides = document.querySelector('.slides');
+        const imagens = document.querySelectorAll('.imagens');
+        let imagemAtual = 0;
+        const totalSlides = imagens.length;
+        const primeiroSlide = imagens[0].cloneNode(true);
+        slides.appendchild(primeiroSLide);
+
+        function nextSlide {
+            imagemAtual++;
+            slides.style.transition = 'transform 0.5s ease-in-out';
+            slides.style.transform = `translateX(-${imagemAtual * 100}%)`;
+
+            if (imagemAtual === totalSlides) {
+                setTimeOut (() => {
+                    slides.style.transition = 'none';
+                    imagemAtual = 0
+                    slides.style.transform = `translateX(0)`
+                }, 500)
             }
+        }
+            setInterval(nextSlide, 5000)
+     })
 
-            function updateSlidePosition() {
-                slides.style.transform = `translateX(-${currentImage * 100}%)`
-            }
 
-            setInterval(nextSlide, 4000);
-        })
 
-        */
-
-        document.addEventListener('DOMContentLoaded', function() {
+       /* document.addEventListener('DOMContentLoaded', function() {
             const slides = document.querySelector('.slides');
             const images = document.querySelectorAll('.imagens');
             let currentImage = 0;
@@ -621,10 +628,10 @@
             slides.appendChild(firstSlide);
 
             
-            function nextSlide() {
-                currentImage++;
-                slides.style.transition = 'transform 0.5s ease-in-out';
-                slides.style.transform =  `translateX(-${currentImage * 100}%)`;
+                function nextSlide() {
+                    currentImage++;
+                    slides.style.transition = 'transform 0.5s ease-in-out';
+                    slides.style.transform =  `translateX(-${currentImage * 100}%)`;
 
                 if (currentImage === totalSlides) {
                     setTimeout (() => {
@@ -636,7 +643,7 @@
             }
 
             setInterval(nextSlide, 5000);
-        })
+        }) */
 
     </script>
 </body>
