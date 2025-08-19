@@ -161,24 +161,40 @@
         }
 
 
-        #preVenda {
-            background-color: lightgreen;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: stretch;
-            justify-content: center;
-            width: 95%;
-            margin: auto;
-            margin-bottom: 10%;
-            gap: 30px;
+        #conteiner-preVenda {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
         }
 
 
-        .preVenda1, .preVenda2, .preVenda3, .preVenda4, .preVenda5, .preVenda6, .preVenda7, .preVenda8, .preVenda9, .preVenda10 {
-            border: 1px solid rgba(0, 0, 0, 0.801);
-            width: 18%;
-            height: 290px;
+        .preVenda {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.5s ease-in-out;
+            padding: 10px;
+        }
+
+
+        .item-livro {
+            min-width: 200px;
+            height: 300px;
+            flex-shrink: 0;
+        }
+
+
+        .item-livro img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carrossel-botao {
+            position: absolute;
+            top: 50%; 
+            
+            
         }
 
 
@@ -430,13 +446,13 @@
 </style>
 </head>
 <body>
-    <header id="cabeçalho">
+    <!-- <header id="cabeçalho">
         <div id="títuloCabeçalho">
             <img src="Ursal.jpg" alt="Logo Livraria Ursal">
             <input class="inputCabeçalho" type="text" name="pesquisa" id="ipesquisa" placeholder="Pesquise por nome de autor ou título de livro"> 
         </div>
         </div> 
-        <nav>
+         <nav>
             <ul id="ul-megamenu">
                 <li id="li-megamenu">
                     <div id="div-pre-megamenu">
@@ -491,23 +507,22 @@
                 <div class="imagens"><a href=""><img src="hist_africa.jpg" alt="Imagem3"></a></div>
                 <div class="imagens"><a href=""><img src="promoção-boitempo.jpg" alt="Imagem4"></a></div>
             </div>
-        </section>
+        </section> -->
 
         <div id="preVendaTítulo"><h1>PRÉ-VENDA</h1></div>
-        <section id="preVenda">
-            <div class="preVenda1">PRÉ-VENDA 1</div>
-            <div class="preVenda2">PRÉ-VENDA 2</div>
-            <div class="preVenda3">PRÉ-VENDA 3</div>
-            <div class="preVenda4">PRÉ-VENDA 4</div>
-            <div class="preVenda5">PRÉ-VENDA 5</div>
-            <div class="preVenda6">PRÉ-VENDA 6</div>
-            <div class="preVenda7">PRÉ-VENDA 7</div>
-            <div class="preVenda8">PRÉ-VENDA 8</div>
-            <div class="preVenda9">PRÉ-VENDA 9</div>
-            <div class="preVenda10">PRÉ-VENDA 10</div>
+        <section id="conteiner-preVenda">
+            <button class="carrossel-botao botao-anterior">←</button>
+            <div class="preVenda">
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+            </div>
+            <button class="carrossel-botao botao-proximo">→</button>    
         </section>
 
-        <div id="LançamentosTítulo"><h1>LANÇAMENTOS</h1></div>
+        <!-- <div id="LançamentosTítulo"><h1>LANÇAMENTOS</h1></div>
         <section id="Lançamentos">
             <div class="Lançamento1">LIVRO 1</div>
             <div class="Lançamento2">LIVRO 2</div>
@@ -541,7 +556,7 @@
             <div class="editorasAcadêmicas"><p>EDITORAS ACADEMICAS</p></div>
             <div class="cursoseFormações"><p>CURSOS E FORMAÇÕES</p></div>
         </section>
-    </main>
+    </main> -->
 
     <!--  <aside id="editorasParceiras">
         <h1>EDITORAS PARCEIRAS</h1>
@@ -574,8 +589,25 @@
         const slides = document.querySelector('.slides');
         const imagens = document.querySelectorAll('.imagens');
         let imagemAtual = 0;
-        const totalSlides =; 
-        const 
+        const totalSlides = imagens.length; 
+        const firstSlide = imagens[0].cloneNode(true);
+        slides.appendChild(firstSlide);
+
+        function nextSlide () {
+            imagemAtual++;
+            slides.style.transition = 'transform 0.5s ease-in-out';
+            slides.style.transform =  `translateX(-${imagemAtual * 100}%)`;
+
+            if (imagemAtual === totalSlides) {
+                setTimeout(() => {
+                    slides.style.transition = 'none';
+                    imagemAtual = 0;
+                    slides.style.transform =  `translateX(-${0}%)`;
+                }, 500)
+            }
+        }
+
+        setInterval(nextSlide, 5000)
      })
 
 
