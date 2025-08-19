@@ -569,29 +569,13 @@
 
     <script>
         
-     document.addEventListener('DOMContentLoaded', function(){
+     document.addEventListener('DOMContentLoaded', function() {
 
         const slides = document.querySelector('.slides');
         const imagens = document.querySelectorAll('.imagens');
         let imagemAtual = 0;
-        const totalSlides = imagens.length;
-        const firstSlide = imagens[0].cloneNode(true);
-        slides.appendChild(firstSlide);
-
-        function nextSlide() {
-            imagemAtual++;
-            slides.style.transition = 'transform 0.5s ease-in-out'; 
-            slides.style.transform = `translateX(-${imagemAtual * 100}%)`;
-
-            if (imagemAtual === totalSlides) {
-                setTimeout(() => {
-                    slides.style.transition = 'none';
-                    imagemAtual = 0;
-                    slides.style.transform = `translateX(-${0})`
-                }, 500)
-            }
-        }
-            setInterval(nextSlide, 5000)
+        const totalSlides =; 
+        const 
      })
 
 
