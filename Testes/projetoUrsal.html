@@ -178,9 +178,9 @@
 
 
         .item-livro {
-            min-width: 200px;
+            min-width: 200px; /* largura fixa p/ cada item */
             height: 300px;
-            flex-shrink: 0;
+            flex-shrink: 0; /* Não deixa encolher */
         }
 
 
@@ -192,9 +192,25 @@
 
         .carrossel-botao {
             position: absolute;
-            top: 50%; 
-            
-            
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px; 
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+
+        .botao-anterior {
+            left: 10px;
+        }
+
+        .botao-proximo {
+            right: 10px;
         }
 
 
@@ -518,6 +534,21 @@
                 <div class="item-livro"><img src="" alt=""></div>
                 <div class="item-livro"><img src="" alt=""></div>
                 <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
+                <div class="item-livro"><img src="" alt=""></div>
             </div>
             <button class="carrossel-botao botao-proximo">→</button>    
         </section>
@@ -610,8 +641,7 @@
         setInterval(nextSlide, 5000)
      })
 
-
-
+     
        /* document.addEventListener('DOMContentLoaded', function() {
             const slides = document.querySelector('.slides');
             const images = document.querySelectorAll('.imagens');
@@ -637,6 +667,37 @@
 
             setInterval(nextSlide, 5000);
         }) */
+
+
+        document.addEventListener('DOMContentLoaded', function(){
+            const preVenda = document.querySelector('.preVenda');
+            const botaoAnterior = document.querySelector('.botao-anterior');
+            const botaoProximo = document.querySelector('.botao-proximo');
+            const itemLivro = document.querySelectorAll('.item-livro');
+            let posicaoAtual = 0;
+            const itensVisiveis = 4;
+            const larguraItem = itemLivro[0].offsetWidth + 20; // width + gap
+
+
+            function moverCarrossel(direcao) {
+                const movimento = larguraItem * itensVisiveis * direcao;
+                posicaoAtual += movimento;
+                preVenda.style.transform = `translateX(${posicaoAtual}px)`;
+            }
+
+            botaoAnterior.addEventListener('click', function() {
+                moverCarrossel(-1);
+            });
+
+            botaoProximo.addEventListener('click', function() {
+                moverCarrossel(1);
+            });
+
+
+
+
+
+        })
 
     </script>
 </body>
