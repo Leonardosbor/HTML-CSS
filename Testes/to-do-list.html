@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha lista de tarefas</title>
+    <style>
+        body {
+            background-color: rgba(231, 11, 165, 0.616);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+
+        }
+
+        #conteiner-pai {
+            background-color: rgba(165, 39, 165, 0.651);
+            border-radius: 10px;
+            text-indent: 10px;
+            padding: 4px;
+            margin: 10px;
+            box-shadow: 2px 2px 7px black;
+            width: 400px;
+        }
+
+        #conteiner-pai h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #inputList {
+            border-radius: 4px;
+            border: none;
+            padding: 4px;
+            width: 200px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #button {
+            border-radius: 4px;
+            border: none;
+            padding: 4px;
+            width: 70px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            cursor: pointer;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteiner-pai">
+        <h1>TO-DO LIST</h1>
+        <div id="conteiner-filho">
+            <input type="text" name="list" id="inputList" placeholder="Adicione os itens aqui">
+            <button id="button">Adicionar</button>
+        </div>
+        <ul id="listadeTarefas">
+
+        </ul>
+    </div>
+
+
+    <script>
+
+            const inputList = document.querySelector('.inputList');
+            const button = document.querySelector('.button');
+            const listadeTarefas = document.querySelector('.listadeTarefas');
+
+            
+        
+    </script>
+</body>
+</html>
