@@ -29,7 +29,7 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        #inputList {
+        #taskInput {
             border-radius: 4px;
             border: none;
             padding: 4px;
@@ -37,7 +37,7 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
-        #button {
+        #addbutton {
             border-radius: 4px;
             border: none;
             padding: 4px;
@@ -52,10 +52,10 @@
     <div id="conteiner-pai">
         <h1>TO-DO LIST</h1>
         <div id="conteiner-filho">
-            <input type="text" name="list" id="inputList" placeholder="Adicione os itens aqui">
-            <button id="button">Adicionar</button>
+            <input type="text" name="list" id="taskInput" placeholder="Adicione os itens aqui">
+            <button id="addbutton">Adicionar</button>
         </div>
-        <ul id="listadeTarefas">
+        <ul id="taskList">
 
         </ul>
     </div>
@@ -63,16 +63,20 @@
 
     <script>
 
-            const inputList = document.querySelector('.inputList');
-            const button = document.querySelector('.button');
-            const listadeTarefas = document.querySelector('.listadeTarefas');
+         const taskInput = document.querySelector('.taskInput');
+         const addButton = document.querySelector('.addbutton');
+         const taskList = document.querySelector('.taskList');
 
-            button.addEventListener('click', function() {
+         addButton.addEventListener('click', function() {
+        
+         const taskText = taskInput.value.trim();
+         if (taskText !== "") {
+            const listItem = document.querySelector('li');
+            listItem.textContent
+         }
 
-                const taskText = inputList.value.trim();
-                 
 
-            })
+         })
 
             
         
