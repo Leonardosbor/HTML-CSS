@@ -29,7 +29,7 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        #taskInput {
+        #Input {
             border-radius: 4px;
             border: none;
             padding: 4px;
@@ -37,7 +37,7 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
-        #addbutton {
+        #Button {
             border-radius: 4px;
             border: none;
             padding: 4px;
@@ -52,10 +52,10 @@
     <div id="conteiner-pai">
         <h1>TO-DO LIST</h1>
         <div id="conteiner-filho">
-            <input type="text" name="list" id="taskInput" placeholder="Adicione os itens aqui">
-            <button id="addbutton">Adicionar</button>
+            <input type="text" name="list" id="Input" placeholder="Adicione os itens aqui">
+            <button id="Button">Adicionar</button>
         </div>
-        <ul id="taskList">
+        <ul id="List">
 
         </ul>
     </div>
@@ -63,23 +63,34 @@
 
     <script>
 
-         const taskInput = document.querySelector('.taskInput');
-         const addButton = document.querySelector('.addbutton');
-         const taskList = document.querySelector('.taskList');
+        const Button = document.querySelector('#Button');
+        const Input = document.querySelector('#Input');
+        const List = document.querySelector('#List');
 
-         addButton.addEventListener('click', function() {
+        Button.addEventListener('click', function() {
+            const newInput = Input.value.trim();
+            if (newInput !== "") {
+                const listItem = document.createElement('li');
+                listItem.textContent = newInput;
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Excluir';
+                deleteBtn.className = 'deleteBtn';
+
+                deleteBtn.addEventListener('click', function() {
+                    List.removeChild(listItem);
+                });
+
+                listItem.appendChild(deleteBtn);
+                List.appendChild(listItem);
+                Input.value = '';
+            }
+        });
+
+
         
-         const taskText = taskInput.value.trim();
-         if (taskText !== "") {
-            const listItem = document.querySelector('li');
-            listItem.textContent
-         }
 
-
-         })
-
-            
-        
     </script>
+
 </body>
 </html>
