@@ -29,7 +29,7 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        #Input {
+        #taskInput {
             border-radius: 4px;
             border: none;
             padding: 4px;
@@ -37,7 +37,7 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
-        #Button {
+        #addButton {
             border-radius: 4px;
             border: none;
             padding: 4px;
@@ -52,48 +52,46 @@
     <div id="conteiner-pai">
         <h1>TO-DO LIST</h1>
         <div id="conteiner-filho">
-            <input type="text" name="list" id="Input" placeholder="Adicione os itens aqui">
-            <button id="Button">Adicionar</button>
+            <input type="text" name="list" id="taskInput" placeholder="Adicione os itens aqui">
+            <button id="addButton">Adicionar</button>
         </div>
-        <ul id="Lista">
+        <ul id="taskList">
 
         </ul>
     </div>
 
 
-    <script>
+ <script>
+    const taskInput = document.querySelector('#taskInput');
+    const addButton = document.querySelector('#addButton');
+    const taskList = document.querySelector('#taskList');
 
-        const Inputt = document.querySelector('#Input');
-        const Button = document.querySelector('#Button');
-        const Lista = document.querySelector('#Lista');
+    addButton.addEventListener('click', function() {
+        const taskText = taskInput.value.trim();
+        if (taskText !== "") {
+            
+            const listItem = document.createElement('Li');
+            listItem.textContent = taskText;
 
-        Button.addEventListener('click', function() {
-            const Input = Inputt.value.trim();
-            if (Input !== " ") {
-                const itemLista = document.createElement('li');
-                itemLista.textContent = Input;
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Deletar';
+            deleteBtn.className = 'delete-Btn';
 
-                const deleteBtn = document.createElement('button');
-                deleteBtn.textContent = 'Excluir';
-                deleteBtn.className = 'delete-btn';
-
-                deleteBtn.addEventListener('click', function() {
-                    Lista.removeChild(itemLista);
-                });
-
-                itemLista.appendChild(deleteBtn);
-                Lista.appendChild(itemLista);
-                Input.value = ' ';
-            }
-            Input.addEventListener('keypress', function(event) {
-                if (key.event === 'Enter') {
-                    Button.click();
-                }
-            })
+            deleteBtn.addEventListener('click', function() {
+                taskList.removeChild(listItem);
         })
+            listItem.appendChild(deleteBtn);
+            taskList.appendChild(listItem);
+            taskInput.value = '';
+        }
+    })
 
-
-    </script>
+    taskInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addButton.click();
+        }
+    });
+ </script>
 
 </body>
 </html>
