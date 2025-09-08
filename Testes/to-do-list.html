@@ -62,25 +62,26 @@
 
 
  <script>
+   const addButton = document.querySelector('#addButton');
     const taskInput = document.querySelector('#taskInput');
-    const addButton = document.querySelector('#addButton');
     const taskList = document.querySelector('#taskList');
 
     addButton.addEventListener('click', function() {
         const taskText = taskInput.value.trim();
-        if (taskText !== "") {
+        if (taskText !== '') {
             
-            const listItem = document.createElement('Li');
+            const listItem = document.createElement('li');
             listItem.textContent = taskText;
 
-            const deleteBtn = document.createElement('button');
-            deleteBtn.textContent = 'Deletar';
-            deleteBtn.className = 'delete-Btn';
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Deletar';
+            deleteButton.className = 'button';
 
-            deleteBtn.addEventListener('click', function() {
+            deleteButton.addEventListener('click', function() {
                 taskList.removeChild(listItem);
-        })
-            listItem.appendChild(deleteBtn);
+            });
+
+            listItem.appendChild(deleteButton);
             taskList.appendChild(listItem);
             taskInput.value = '';
         }
@@ -90,7 +91,7 @@
         if (event.key === 'Enter') {
             addButton.click();
         }
-    });
+    })
  </script>
 
 </body>
