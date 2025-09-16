@@ -30,10 +30,26 @@
         const adButton = document.querySelector('#addButton');
         const Items = document.querySelector('#listItems');
 
-        adButton.addEventListener('click', function() {
+        adButton.addEventListener('click', function(){
+            const textBox = inputTextBox.value.trim();
+            if (textBox !== '') {
+                
+                const newItem = document.createElement('li');
+                newItem.textContent = textBox;
+                Items.appendChild(newItem);
+                inputTextBox.value = '';
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Deletar';
+                deleteButton.className = 'dldbtn';
+
+                deleteButton.addEventListener('click', function() {
+                    Items.removeChild(newItem);
+                })
+                
+            }            
             
-            
-        })
+        }) 
     </script>
 </body>
 </html>
