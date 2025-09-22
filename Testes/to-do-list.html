@@ -46,6 +46,13 @@
             cursor: pointer;
             margin-left: 2px;
         }
+
+        .concluído {
+            text-decoration: line-through;
+            color: black;
+        }
+
+        
     </style>
 </head>
 <body>
@@ -62,36 +69,40 @@
 
 
  <script>
-   const addButton = document.querySelector('#addButton');
-    const taskInput = document.querySelector('#taskInput');
-    const taskList = document.querySelector('#taskList');
 
-    addButton.addEventListener('click', function() {
-        const taskText = taskInput.value.trim();
-        if (taskText !== '') {
-            
-            const listItem = document.createElement('li');
-            listItem.textContent = taskText;
+    const Input = document.querySelector('#taskInput');
+    const adButton = document.querySelector('#addButton');
+    const List = document.querySelector('#taskList');
+    
+    adButton.addEventListener('click', function() {
+        const inputItem = Input.value;
+
+        if(inputItem !== ''){
+
+            const addedItem = document.createElement('li');
+            addedItem.textContent = inputItem;
+
+            addedItem.addEventListener('click', () => {
+                addedItem.classList.toggle('concluído');
+            })
 
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Deletar';
-            deleteButton.className = 'button';
 
             deleteButton.addEventListener('click', function() {
-                taskList.removeChild(listItem);
-            });
+                List.removeChild(addedItem);
+            })
 
-            listItem.appendChild(deleteButton);
-            taskList.appendChild(listItem);
-            taskInput.value = '';
+            addedItem.appendChild(deleteButton);
+            List.appendChild(addedItem);
+            Input.value = '';
+
+            
+
+            
         }
     })
 
-    taskInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            addButton.click();
-        }
-    })
  </script>
 
 </body>
