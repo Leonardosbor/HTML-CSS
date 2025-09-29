@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="conteiner-todolist">
-        <input type="text" name="textInput" id="textInput">
+        <input type="text" name="textInput" id="textInput" placeholder="Add an item here">
         <button id="addButton">Adicionar</button>
         <ul id="listItems">
 
@@ -25,16 +25,40 @@
     </div>
 
     <script>
+        let taskList = [];        
         const txtInput = document.querySelector('#textInput');
         const adButton = document.querySelector('#addButton');
         const List = document.querySelector('#listItems');
-        const taskList = [];
 
-        function renderList() {
-            list.InnerHTML = '';
+        adButton.addEventListener('click', function() {
+            let textInput = txtInput.value;
+            if(textInput !== '') {
+
+                // add item 
+                taskList.push(textInput);
+                let newItem = document.createElement('li');
+                newItem.textContent = textInput;
+
+                // clicar no item em deletá-lo
+                newItem.onclick = function() {
+                    List.removeChild(newItem);
+                }
+
+                List.appendChild(newItem);
+                txtInput.value = '';
+            }
+        })
+                        
+        
+        
+        
+
+
+
+        
             
 
-        }
+        
         
 
 
