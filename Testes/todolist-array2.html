@@ -32,11 +32,31 @@
 
         function renderList() {
             List.innerHTML = '';
-            taskList.forEach(function(taskText, index){
-                
-            })
 
-        }   
+            taskList.forEach(function(taskText, index){
+
+                const newItem = document.createElement('li');
+
+                const textSpan = document.createElement('span');
+                textSpan.textContent = taskText;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'X';
+                deleteButton.classList.add('dlt-btn');
+
+                deleteButton.onclick = function() {
+                    taskList.splice(index, 1);
+                    renderList();
+                }
+
+                newItem.appendChild(textSpan);
+                newItem.appendChild(deleteButton);
+                List.appendChild(newItem);
+
+            })
+        }
+
+
                         
         
         
