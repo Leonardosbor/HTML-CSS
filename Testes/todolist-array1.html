@@ -31,7 +31,7 @@
         const List = document.querySelector('#listItems');
 
         adButton.addEventListener('click', function() {
-            let textInput = txtInput.value;
+            let textInput = txtInput.value.trim();
             if(textInput !== '') {
                 taskList.push(textInput);
                 let addedItem = document.createElement('li');
